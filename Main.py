@@ -67,10 +67,9 @@ class Facebook:
 
 def main():
     email = str(input('Type in your username or email for Facebook : '))
-
+    password = input(str('Type the password of your facebook')
     ime = input(str('Type in your friends Name and Surname: '))
     poruka = input(str('Type in the message you want to send : '))
-    password = 'Elvirpatka1337Tiberz1144'
     user = Facebook(email, password)
     user.getpage()
     user.login()
