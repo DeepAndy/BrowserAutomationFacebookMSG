@@ -55,6 +55,8 @@ class Facebook:
         self.browser.find_element_by_xpath('''//*[@id]/a/div/div/div/div[contains(text(),"{}")]'''.format(name)).click()
         self.browser.implicitly_wait(5)
     def sendmessage(self, text):
+        #Very unreliable way of sending a message *no verification of username
+        #Just sends the message to the opened chat-box.(>findfriends)
         joke = self.browser.find_element_by_xpath('''//*[@id]/div[5]/div/div/div/span/div/div[2]/div''')
         joke.send_keys(str(text))
         joke.send_keys(Keys.RETURN)
